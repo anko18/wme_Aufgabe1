@@ -67,6 +67,11 @@ body{
     font-family: 'Roboto-Bold', monospace;
 }
 
+.nav__icon {
+    width: 20px;
+    height: 20px;
+}
+
 .nav__link{
     color: #727271;
     text-decoration: none;
@@ -142,6 +147,12 @@ th  {
     font-family: 'Roboto-Bold', monospace;
     border: solid 2px;
     border-color: transparent transparent #b4b4b4 transparent;
+}
+
+.sort_icon{
+    width: 15px;
+    height: 15px;
+    fill: #09da09;
 }
 
 .row:nth-child(even) {

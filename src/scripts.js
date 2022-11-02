@@ -407,3 +407,30 @@ let content = document.getElementById('content');
 data.forEach(element => content.insertAdjacentHTML("beforeend", `<tr class="row"><td>${element.id}</td>
 <td>${element.name}</td><td>${element["birth rate per 1000"]}</td><td>${element["cell phones per 100"]}</td><td>${element["children per woman"]}</td><td>${element["electricity consumption per capita"]}</td>
 <td>${element["gdp_per_capita"]}</td><td>${element["gdp_per_capita_growth"]}</td></tr>`));
+
+
+function sort_table_up(){
+    var tbody = document.getElementById('content');
+    var rows = Array.from(tbody.rows);
+
+    rows.sort((tr1, tr2) => {
+        var tr1Text = tr1.cells[1].textContent;
+        var tr2Text = tr2.cells[1].textContent;
+        return tr1Text.localeCompare(tr2Text);
+    });
+
+    tbody.append(...rows);
+}
+
+function sort_table_down(){
+    var tbody = document.getElementById('content');
+    var rows = Array.from(tbody.rows);
+
+    rows.sort((tr1, tr2) => {
+        var tr1Text = tr1.cells[1].textContent;
+        var tr2Text = tr2.cells[1].textContent;
+        return tr2Text.localeCompare(tr1Text);
+    });
+
+    tbody.append(...rows);
+}

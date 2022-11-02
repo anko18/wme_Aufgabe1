@@ -18,33 +18,33 @@
         <nav class="header__nav">
             <ul>
                 <li class="header__nav__blocks">
-                    <img src="icons/table.svg">
+                    <img class="nav__icon" src="icons/table-solid.svg">
                     <a  class="nav__link" href="">A1 - Table</a>
 
                 </li>
                 <li class="header__nav__blocks">
-                    <img src="icons/gear-fill.svg">
+                    <img class="nav__icon" src="icons/gear-solid.svg">
                     <a class="nav__link" href="">A2 - Parse</a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img src="icons/save2.svg">
+                    <img class="nav__icon" src="icons/floppy-disk-regular.svg">
                     <a class="nav__link" href="">A2 - Save
                     </a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img  src="icons/printer.svg">
+                    <img class="nav__icon" src="icons/print-solid.svg">
                     <a class="nav__link" href="">A2 - Print</a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img class="nav__logo" src="icons/table.svg">
+                    <img class="nav__icon" src="icons/node.svg">
                     <a class="nav__link" href="">A3 - REST</a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img src="icons/map.svg">
+                    <img class="nav__icon" src="icons/map-location-dot-solid.svg">
                     <a class="nav__link"  href="">A4 - Vis</a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img src="icons/box.svg">
+                    <img class="nav__icon" src="icons/cube-solid.svg">
                     <a class="nav__link" href="">A5 - 3D</a>
                 </li>
             </ul>
@@ -65,11 +65,14 @@
         <p>Show/Hide:</p>
     </section>
     <section>
-        <table class="table">
+        <table class="table" id="table_">
             <thead>
               <tr>
                   <th>ID</th>
-                  <th>Country</th>
+                  <th id="country">Country
+                      <img class="sort_icon" src="icons/sort-down-solid.svg" onclick="sort_table_down()">
+                      <img class="sort_icon" src="icons/sort-up-solid.svg" onclick="sort_table_up()">
+                  </th>
                   <th>birth rate / 1000</th>
                   <th>cellphones / 100</th>
                   <th>children / woman</th>
