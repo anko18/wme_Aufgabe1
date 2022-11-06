@@ -405,8 +405,8 @@ let data =
 let content = document.getElementById('content');
 
 data.forEach(element => content.insertAdjacentHTML("beforeend", `<tr class="row"><td>${element.id}</td>
-<td>${element.name}</td><td>${element["birth rate per 1000"]}</td><td>${element["cell phones per 100"]}</td><td>${element["children per woman"]}</td><td>${element["electricity consumption per capita"]}</td>
-<td>${element["gdp_per_capita"]}</td><td>${element["gdp_per_capita_growth"]}</td></tr>`));
+<td>${element.name}</td><td class="birthrate">${element["birth rate per 1000"]}</td><td class="cellphones">${element["cell phones per 100"]}</td><td class="children">${element["children per woman"]}</td><td class="electricity">${element["electricity consumption per capita"]}</td>
+<td class="gdp">${element["gdp_per_capita"]}</td></tr>`));
 
 
 function sort_table_up(){
@@ -434,3 +434,35 @@ function sort_table_down(){
 
     tbody.append(...rows);
 }
+
+function showhide(column_name) {
+    var column_cells = document.getElementsByClassName(column_name);
+
+    for (var i = 0; i < column_cells.length; i++) {
+        var element = column_cells[i];
+        if(element.classList.contains("hidden")){
+            element.setAttribute("class", column_name);
+        }
+        else{
+            element.setAttribute("class", column_name + " hidden");
+        }
+
+    }
+}
+
+function showmenu(){
+    var menu = document.getElementById("menu");
+    var textblock = document.getElementById("textblock")
+
+    if(!menu.classList.contains("navnothidden")){
+        menu.setAttribute("class", "navnothidden");
+        textblock.setAttribute("class", "textblockgap");
+    }
+    else{
+        menu.setAttribute("class", "header__nav");
+        textblock.setAttribute("class", "text-block");
+    }
+
+}
+
+

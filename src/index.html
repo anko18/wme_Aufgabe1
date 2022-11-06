@@ -15,81 +15,100 @@
         <a class="logo__link" href="">
             <img class="header__logo" src="/src/icons/world_data-logo.svg" alt="world_data logo">
         </a>
-        <nav class="header__nav">
+        <img class="menu" src="icons/bars-solid.svg" alt="menu" onclick="showmenu()">
+        <nav id="menu" class="header__nav">
             <ul>
                 <li class="header__nav__blocks">
-                    <img class="nav__icon" src="icons/table-solid.svg">
+                    <img class="nav__icon" alt="icon table" src="icons/table-solid.svg">
                     <a  class="nav__link" href="">A1 - Table</a>
-
                 </li>
                 <li class="header__nav__blocks">
-                    <img class="nav__icon" src="icons/gear-solid.svg">
+                    <img class="nav__icon" alt="icon gear" src="icons/gear-solid.svg">
                     <a class="nav__link" href="">A2 - Parse</a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img class="nav__icon" src="icons/floppy-disk-regular.svg">
+                    <img class="nav__icon" alt="icon save" src="icons/floppy-disk-regular.svg">
                     <a class="nav__link" href="">A2 - Save
                     </a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img class="nav__icon" src="icons/print-solid.svg">
+                    <img class="nav__icon" alt="icon printer" src="icons/print-solid.svg">
                     <a class="nav__link" href="">A2 - Print</a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img class="nav__icon" src="icons/node.svg">
+                    <img class="nav__icon" alt="icon node.js" src="icons/node.svg">
                     <a class="nav__link" href="">A3 - REST</a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img class="nav__icon" src="icons/map-location-dot-solid.svg">
+                    <img class="nav__icon" alt="icon map" src="icons/map-location-dot-solid.svg">
                     <a class="nav__link"  href="">A4 - Vis</a>
                 </li>
                 <li class="header__nav__blocks">
-                    <img class="nav__icon" src="icons/cube-solid.svg">
+                    <img class="nav__icon" alt="icon cube" src="icons/cube-solid.svg">
                     <a class="nav__link" href="">A5 - 3D</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <section class="text-block">
-        <p class="headline">World Data Overwiev ...</p>
-        <div class="text">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
+    <div class="wrapper">
+        <section id="textblock" class="text-block">
+            <p class="headline">World Data Overwiev ...</p>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
 
-            <p>sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+                <p>sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
 
-            <p>tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. from: <br>
-            <a href="https://www.loremipsum.de/">www.loremipsum.de</a></p>
-        </div>
-    </section>
-    <section class="showhide">
-        <p>Show/Hide:</p>
-    </section>
-    <section>
-        <table class="table" id="table_">
-            <thead>
-              <tr>
-                  <th>ID</th>
-                  <th id="country">Country
-                      <img class="sort_icon" src="icons/sort-down-solid.svg" onclick="sort_table_down()">
-                      <img class="sort_icon" src="icons/sort-up-solid.svg" onclick="sort_table_up()">
-                  </th>
-                  <th>birth rate / 1000</th>
-                  <th>cellphones / 100</th>
-                  <th>children / woman</th>
-                  <th>electric usage</th>
-                  <th>GDP per capita</th>
-                  <th>GDP per capita growth</th>
-              </tr>
-            </thead>
-            <tbody id="content">
-            </tbody>
-        </table>
-    </section>
-
-    <footer>
-        <p>Copyright © 2020 world_data <br> First course exercise HTML, CSS and JS of the lecture Web and Multimedia</p>
-        <p>This solution was created by:<br> Anastasiia Korolenko</p>
-    </footer>
+                <p>tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. from: <br>
+                <a href="https://www.loremipsum.de/">www.loremipsum.de</a></p>
+            </div>
+        </section>
+        <section class="showhide">
+            <p>Show/Hide: <span class="showhide__columns" onclick="showhide('birthrate')">birth rate / 1000</span>
+                <span class="showhide__columns" onclick="showhide('cellphones')">cellphones / 100</span>
+                <span>|</span>
+                <span class="showhide__columns" onclick="showhide('children')">children / woman</span>
+                <span>|</span>
+                <span class="showhide__columns" onclick="showhide('electricity')">electric usage</span>
+                <span>|</span>
+                <span class="showhide__columns" onclick="showhide('gdp')">GDP per capita</span>
+            </p>
+        </section>
+        <section>
+            <table class="table" id="table_">
+                <thead>
+                  <tr id="thead_tr">
+                      <th>ID</th>
+                      <th>Country
+                          <img class="sort_icon" alt="alphabetize reversed icon sort-down" src="icons/sort-down-solid.svg" onclick="sort_table_down()">
+                          <img class="sort_icon" alt="alphabetize icon sort-up" src="icons/sort-up-solid.svg" onclick="sort_table_up()">
+                      </th>
+                      <th class="birthrate">birth rate / 1000</th>
+                      <th class="cellphones">cellphones / 100</th>
+                      <th class="children">children / woman</th>
+                      <th class="electricity">electric usage</th>
+                      <th class="gdp">GDP per capita</th>
+                  </tr>
+                </thead>
+                <tbody id="content">
+                </tbody>
+            </table>
+        </section>
+        <section class="showhide">
+            <p>Show/Hide: <span class="showhide__columns" onclick="showhide('birthrate')">birth rate / 1000</span>
+                <span class="showhide__columns" onclick="showhide('cellphones')">cellphones / 100</span>
+                <span>|</span>
+                <span class="showhide__columns" onclick="showhide('children')">children / woman</span>
+                <span>|</span>
+                <span class="showhide__columns" onclick="showhide('electricity')">electric usage</span>
+                <span>|</span>
+                <span class="showhide__columns" onclick="showhide('gdp')">GDP per capita</span>
+            </p>
+        </section>
+        <footer>
+            <p>Copyright © 2020 world_data <br> First course exercise HTML, CSS and JS of the lecture Web and Multimedia</p>
+            <p>This solution was created by:<br> Anastasiia Korolenko</p>
+        </footer>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
